@@ -9,7 +9,7 @@ var events = require('events');
 /**
  * proxy
  */
-request = request.defaults({ 'proxy': 'http://127.0.0.1:2099' });
+// request = request.defaults({ 'proxy': 'http://127.0.0.1:2099' });
 
 /**
  * Date extension
