@@ -49,7 +49,7 @@ function __arrayContainsStr(array, str) {
  */
 var loginHar = {
 
-    "headersSize": 2118,
+    // "headersSize": 2118,
     "postData": {
         "params": [{
             "name": "csrfmiddlewaretoken",
@@ -61,11 +61,11 @@ var loginHar = {
             },
             {
                 "name": "username",
-                "value": "47542216@qq.com"
+                "value": config.basic.username
             },
             {
                 "name": "password",
-                "value": "lc799110"
+                "value": config.basic.password
             }],
         "mimeType": "application/x-www-form-urlencoded"
 				},
@@ -78,10 +78,10 @@ var loginHar = {
             "name": "Connection",
             "value": "keep-alive"
         },
-        {
-            "name": "Content-Length",
-            "value": "125"
-        },
+        // {
+        //     "name": "Content-Length",
+        //     "value": "125"
+        // },
         {
             "name": "Cache-Control",
             "value": "max-age=0"
@@ -333,7 +333,7 @@ var singleRequest = function (entity, callback) {
             concurrencyCount--;
         }
         callback(null);
-    }, 5000);
+    }, config.basic.delay * 1000);
 }
 
 
